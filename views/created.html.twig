@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        <title>Address Book</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>You created a new contact!</h1>
+            {% if newcontact %}
+                <h2>{{ newcontact.getName }}</h2>
+                <p>{{ newcontact.getPhone }}</p>
+                <p>{{ newcontact.getStreet }}</p>
+                <p>{{ newcontact.getCity }}</p>
+            {% endif %}
+            <form action='/'>
+                <button type="submit" class="btn-info">Go Back</button>
+            </form>
+        </div>
+    </body>
+</html>

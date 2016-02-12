@@ -3,13 +3,15 @@ class Contact
 {
     private $name;
     private $phone;
-    private $address;
+    private $street;
+    private $city;
 
-    function __construct($name, $phone, $address)
+    function __construct($name, $phone, $street, $city)
     {
         $this->name = $name;
         $this->phone = $phone;
-        $this->address = $address;
+        $this->street = $street;
+        $this->city = $city;
     }
 
     function getName()
@@ -32,14 +34,24 @@ class Contact
         $this->phone = (string) $phone;
     }
 
-    function getAddress()
+    function getStreet()
     {
-        return $this->address;
+        return $this->street;
     }
 
-    function setAddress()
+    function setStreet()
     {
-        $this->address = (string) $address;
+        $this->street = (string) $street;
+    }
+
+    function getCity()
+    {
+        return $this->city;
+    }
+
+    function setCity()
+    {
+        $this->city = (string) $city;
     }
 
     function save()
