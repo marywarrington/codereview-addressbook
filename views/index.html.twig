@@ -26,6 +26,19 @@
                 </div>
                 <button class="btn btn-info" type="submit">Add Contact</button>
             </form>
+            {% if contacts is not empty %}
+                {% for contact in contacts %}
+                    <div>
+                        <h2>{{ contact.getName }}</h2>
+                        <p>{{ contact.getPhone }}</p>
+                        <p>{{ contact.getStreet }}</p>
+                        <p>{{ contact.getCity }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <form action='/delete_contacts'>
+                <button type="submit" class="btn-danger">Delete All</button>
+            </form>
         </div>
     </body>
 </html>
